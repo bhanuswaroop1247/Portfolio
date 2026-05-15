@@ -24,7 +24,6 @@ const accentBg: Record<string, string> = {
 
 const ProjectCard = ({ project, onClick, compact = false }: Props) => {
     const { title, shortDesc, category, tags, image, pdfPath } = project
-    const [imgLoaded, setImgLoaded] = useState(false)
     const [imgError, setImgError] = useState(false)
 
     const base = process.env.NEXT_PUBLIC_BASE_PATH || ''
@@ -47,8 +46,8 @@ const ProjectCard = ({ project, onClick, compact = false }: Props) => {
         >
             {/* Thumbnail */}
             <div className={`relative ${compact ? 'aspect-video' : 'aspect-video'} overflow-hidden ${accentBgClass}`}>
-                {/* Placeholder — always rendered, image overlays it when loaded */}
-                {(!showImage || !imgLoaded) && (
+                {/* Placeholder — shown only when image is missing or failed to load */}
+                {!showImage && (
                     <div className='absolute inset-0 flex flex-col items-center justify-center gap-2'>
                         <span className='text-5xl font-bold text-white/40'>{initials}</span>
                         <span className={`text-xs font-medium px-2 py-0.5 rounded-full text-white/70 ${accent}`}>{category}</span>
@@ -60,9 +59,8 @@ const ProjectCard = ({ project, onClick, compact = false }: Props) => {
                     <img
                         src={`${base}${image}`}
                         alt={title}
-                        onLoad={() => setImgLoaded(true)}
                         onError={() => setImgError(true)}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
+                        className='absolute inset-0 w-full h-full object-cover'
                     />
                 )}
 

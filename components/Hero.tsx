@@ -21,7 +21,7 @@ const Hero = ({ mainData }: HeroProps) => {
                 }}
             />
 
-            <div className='lg:w-11/12 2xl:w-4/5 w-full mx-auto px-6 2xl:px-0 py-32 lg:py-0'>
+            <div className='lg:w-11/12 2xl:w-4/5 w-full mx-auto px-6 2xl:px-0 py-16 lg:py-0'>
                 <div className='flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8'>
 
                     {/* Text side */}

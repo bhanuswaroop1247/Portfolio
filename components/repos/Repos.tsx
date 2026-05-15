@@ -16,7 +16,7 @@ const Repos = ({ reposData }: Props) => {
     const [galleryOpen, setGalleryOpen] = useState(false)
 
     return (
-        <SectionWrapper id='repos' className='mx-4 md:mx-0 py-20'>
+        <SectionWrapper id='repos' className='mx-4 md:mx-0 py-10 md:py-20'>
             <h2 className='text-3xl font-bold text-center text-[var(--text-primary)]'>GitHub Repos</h2>
             <p className='text-[var(--text-secondary)] text-center mt-2 text-sm'>
                 Open source work &amp; personal projects

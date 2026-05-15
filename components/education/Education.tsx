@@ -9,7 +9,7 @@ interface Props {
 
 const Education = ({ educationData }: Props) => {
     return (
-        <SectionWrapper id='education' className='mx-4 md:mx-0 py-20'>
+        <SectionWrapper id='education' className='mx-4 md:mx-0 py-10 md:py-20'>
             <h2 className='text-3xl font-bold text-center text-[var(--text-primary)]'>Education</h2>
 
             <div className='lg:w-11/12 2xl:w-4/5 mx-auto mt-10 grid md:grid-cols-2 gap-6'>

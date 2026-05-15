@@ -13,7 +13,7 @@ const Contact = ({ mainData }: Props) => {
     const base = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
     return (
-        <SectionWrapper id='contact' className='mx-4 md:mx-0 py-20'>
+        <SectionWrapper id='contact' className='mx-4 md:mx-0 py-10 md:py-20'>
             <h2 className='text-3xl font-bold text-center text-[var(--text-primary)]'>Get In Touch</h2>
             <p className='text-[var(--text-secondary)] text-center mt-2 text-sm'>
                 Open to opportunities, collaborations, and conversations

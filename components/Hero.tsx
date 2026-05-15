@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image'
 import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa'
 import { main } from '@/types/main'
 
@@ -9,6 +8,7 @@ interface HeroProps {
 
 const Hero = ({ mainData }: HeroProps) => {
     const { name, tagline, intro, status, heroImage, resumeUrl, linkedinUrl, githubUrl } = mainData
+    const base = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
     return (
         <section id='home' className='relative min-h-screen w-full flex items-center'>
@@ -74,13 +74,11 @@ const Hero = ({ mainData }: HeroProps) => {
                     {/* Photo side */}
                     <div className='flex-shrink-0'>
                         <div className='w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-[var(--border)] shadow-lg bg-[var(--surface)]'>
-                            <Image
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
                                 alt={name}
-                                width={256}
-                                height={256}
-                                src={heroImage}
+                                src={`${base}${heroImage}`}
                                 className='w-full h-full object-cover'
-                                priority
                                 onError={(e) => {
                                     const target = e.target as HTMLImageElement
                                     target.style.display = 'none'

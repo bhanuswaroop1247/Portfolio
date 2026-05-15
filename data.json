@@ -16,7 +16,7 @@
   "shortDesc": "Top 8 at Product Arena 3.0. Privacy-first AI memory tool built on 50-respondent primary research and 51 competitor tools analyzed.",
   "category": "Product Strategy",
   "tags": ["Product Strategy", "AI", "Primary Research", "GTM"],
-  "image": "/projects/thumb-mitra-ai.jpg",
+  "image": "/Thumbnails/mitra_ai.png",
   "pdfPath": "/projects/mitra-ai.pdf",
   "githubUrl": "",
   "featured": true
@@ -27,8 +27,8 @@
   "shortDesc": "Hooked Model diagnosis of Tata Neu's habit gap. Proposed Neu-Twin: a gamified smart lock screen feature to drive daily engagement.",
   "category": "Product Strategy",
   "tags": ["Product Strategy", "Engagement", "Hooked Model", "Gen Z"],
-  "image": "/projects/thumb-tata-neu.jpg",
-  "pdfPath": "/projects/Tata_Neu.pdf",
+  "image": "/Thumbnails/Tata-Neu.png",
+  "pdfPath": "/projects/Tata Neu.pdf",
   "githubUrl": "",
   "featured": true
 },
@@ -38,7 +38,7 @@
   "shortDesc": "Go-to-market strategy for a wood-fired pizza brand at IIT Hyderabad. 3-pillar plan targeting 255 customers and ₹51,000 revenue.",
   "category": "Product Strategy",
   "tags": ["GTM", "Brand Strategy", "Guesstimate", "Campus"],
-  "image": "/projects/thumb-frescos.jpg",
+  "image": "/Thumbnails/Frescos.png",
   "pdfPath": "/projects/Frescos.pdf",
   "githubUrl": "",
   "featured": true
@@ -89,7 +89,7 @@
       "cgpa": "8.59"
     },
     {
-      "institute": "Sagi Ramakrishnam Raju Engineering College",
+      "institute": "Sagi Ramakrishnam Raju Engineering College, Bhimavaram",
       "degree": "B.Tech Information Technology",
       "startDate": "2019",
       "endDate": "2023",

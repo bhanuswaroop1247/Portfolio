@@ -11,6 +11,8 @@ interface Props {
 
 const ProjectModal = ({ project, onClose }: Props) => {
     const { title, tags, pdfPath, githubUrl } = project
+    const base = process.env.NEXT_PUBLIC_BASE_PATH || ''
+    const fullPdfPath = `${base}${pdfPath}`
 
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
@@ -46,7 +48,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
 
                     <div className='flex items-center gap-2 ml-4 flex-shrink-0'>
                         <a
-                            href={pdfPath}
+                            href={fullPdfPath}
                             download
                             className='flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--accent)] text-sm transition-colors'>
                             <FiDownload size={14} />
@@ -73,7 +75,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
                 {/* PDF viewer */}
                 <div className='flex-1 overflow-hidden bg-[var(--bg)]'>
                     <iframe
-                        src={`${pdfPath}#toolbar=0`}
+                        src={`${fullPdfPath}#toolbar=0`}
                         className='w-full h-full min-h-[60vh]'
                         title={title}
                     />

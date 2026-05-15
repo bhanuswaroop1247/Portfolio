@@ -33,7 +33,7 @@ export default function Header({ logo }: { logo: string }) {
             <nav className='lg:w-11/12 2xl:w-4/5 w-full md:px-6 2xl:px-0 mx-auto py-4 hidden sm:flex items-center justify-between'>
 
                 <Link href={'/'} className='2xl:ml-6 font-semibold text-lg hover:text-[var(--accent)] transition-colors duration-300'>
-                    {logo.split(' ')[0]}
+                    {logo.split(' ').slice(1).join(' ')}
                 </Link>
 
                 <ul className='flex items-center gap-7'>
@@ -60,7 +60,7 @@ export default function Header({ logo }: { logo: string }) {
             </nav>
 
             <nav className='p-4 flex sm:hidden items-center justify-between'>
-                <span className='text-lg font-semibold'>{logo.split(' ')[0]}</span>
+                <span className='text-lg font-semibold'>{logo.split(' ').slice(1).join(' ')}</span>
                 <div className='flex items-center gap-4'>
                     <span
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

@@ -5,6 +5,7 @@ import Projects from "@/components/projects/Projects";
 import Repos from "@/components/repos/Repos";
 import Experiences from "@/components/experiences/Experiences";
 import Education from "@/components/education/Education";
+import Contact from "@/components/Contact";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -21,6 +22,7 @@ const HomePage = ({ data }: Props) => {
             <Repos reposData={data.repos} />
             <Experiences experienceData={data.experiences} />
             <Education educationData={data.educations} />
+            <Contact mainData={data.main} />
             <Footer socials={data.socials} name={data.main.name} />
         </>
     )

@@ -15,13 +15,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head />
-      <ThemeProvider attribute='class' defaultTheme='light'>
-        <body className={`${dmSans.className} bg-[var(--bg)] text-[var(--text-primary)] overflow-x-hidden`}>
+      <body className={`${dmSans.className} bg-[var(--bg)] text-[var(--text-primary)] overflow-x-hidden`}>
+        <ThemeProvider attribute='class' defaultTheme='light'>
           {children}
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

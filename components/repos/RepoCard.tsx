@@ -1,10 +1,11 @@
 'use client';
 import { repo } from '@/types/main'
-import { FiExternalLink } from 'react-icons/fi'
+import { FiEye } from 'react-icons/fi'
 
 interface Props {
     repo: repo
     index: number
+    onClick: () => void
 }
 
 const accentBars = [
@@ -16,12 +17,14 @@ const accentBars = [
     'bg-violet-500',
 ]
 
-const RepoCard = ({ repo, index }: Props) => {
-    const { title, description, techStack, url } = repo
+const RepoCard = ({ repo, index, onClick }: Props) => {
+    const { title, description, techStack } = repo
     const bar = accentBars[index % accentBars.length]
 
     return (
-        <div className='group flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:shadow-md transition-all duration-200 overflow-hidden'>
+        <div
+            onClick={onClick}
+            className='group cursor-pointer flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:shadow-md transition-all duration-200 overflow-hidden'>
             {/* Coloured accent bar */}
             <div className={`h-1 w-full ${bar}`} />
 
@@ -41,15 +44,11 @@ const RepoCard = ({ repo, index }: Props) => {
                     ))}
                 </div>
 
-                {/* CTA */}
-                <a
-                    href={url}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='flex items-center gap-1.5 text-sm font-medium text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors mt-1'>
-                    View on GitHub
-                    <FiExternalLink size={13} />
-                </a>
+                {/* Hint */}
+                <span className='flex items-center gap-1.5 text-sm font-medium text-[var(--accent)] mt-1'>
+                    <FiEye size={13} />
+                    View Details
+                </span>
             </div>
         </div>
     )

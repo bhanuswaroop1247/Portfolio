@@ -38,10 +38,6 @@ const Hero = ({ mainData }: HeroProps) => {
                             </h1>
                         </div>
 
-                        <p className='text-[var(--text-secondary)] text-base md:text-lg font-medium'>
-                            {tagline}
-                        </p>
-
                         <p className='text-[var(--text-secondary)] text-sm md:text-base leading-relaxed max-w-lg'>
                             {intro}
                         </p>

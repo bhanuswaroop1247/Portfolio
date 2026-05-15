@@ -1,0 +1,109 @@
+{
+  "main": {
+    "name": "Pudi Bhanu Swaroop",
+    "tagline": "Problem Solver · Systems Thinker · Product Enthusiast",
+    "intro": "I am a problem solver who enjoys working in ambiguous environments and using critical thinking to deeply understand problems. Through structured thinking, storytelling, and effective communication, I aim to streamline processes, collaborate across teams, and bring ideas to life.",
+    "status": "Masters Student at IIT Hyderabad",
+    "heroImage": "/profile.jpg",
+    "resumeUrl": "/resume.pdf",
+    "linkedinUrl": "https://www.linkedin.com/in/pudi-bhanu-swaroop",
+    "githubUrl": "https://github.com/bhanuswaroop1247"
+  },
+  "projects": [
+    {
+  "id": "Mitra.ai",
+  "title": "Mitra.ai — Private AI Memory System",
+  "shortDesc": "Top 8 at Product Arena 3.0. Privacy-first AI memory tool built on 50-respondent primary research and 51 competitor tools analyzed.",
+  "category": "Product Strategy",
+  "tags": ["Product Strategy", "AI", "Primary Research", "GTM"],
+  "image": "/projects/thumb-mitra-ai.jpg",
+  "pdfPath": "/projects/mitra-ai.pdf",
+  "githubUrl": "",
+  "featured": true
+},
+{
+  "id": "Tata Neu",
+  "title": "Tata Neu — Gen Z User Engagement Strategy",
+  "shortDesc": "Hooked Model diagnosis of Tata Neu's habit gap. Proposed Neu-Twin: a gamified smart lock screen feature to drive daily engagement.",
+  "category": "Product Strategy",
+  "tags": ["Product Strategy", "Engagement", "Hooked Model", "Gen Z"],
+  "image": "/projects/thumb-tata-neu.jpg",
+  "pdfPath": "/projects/Tata_Neu.pdf",
+  "githubUrl": "",
+  "featured": true
+},
+{
+  "id": "Frescos",
+  "title": "Frescos Pizza — Brand & Growth Strategy",
+  "shortDesc": "Go-to-market strategy for a wood-fired pizza brand at IIT Hyderabad. 3-pillar plan targeting 255 customers and ₹51,000 revenue.",
+  "category": "Product Strategy",
+  "tags": ["GTM", "Brand Strategy", "Guesstimate", "Campus"],
+  "image": "/projects/thumb-frescos.jpg",
+  "pdfPath": "/projects/Frescos.pdf",
+  "githubUrl": "",
+  "featured": true
+}
+  ],
+  "repos": [
+    {
+  "id": "keratoconus-rf",
+  "title": "Kerataconus Classification System",
+  "description": "ML pipeline for keratoconus detection using Random Forest on corneal topography data from clinical eye datasets.",
+  "techStack": ["Python", "scikit-learn", "OpenCV", "Pandas"],
+  "url": "https://github.com/bhanuswaroop1247/KerataconusRF",
+  "featured": true
+},
+{
+  "id": "sunshine-rag",
+  "title": "End-to-End RAG-Based AI Content Review Platform for Sunshine, IITH",
+  "description": "RAG-based assistant for the Sunshine Counselling Cell at IITH to help content, design and publicity teams review and verify content.",
+  "techStack": ["Python", "LangChain", "RAG", "LLM"],
+  "url": "https://github.com/bhanuswaroop1247/Sunshine-RAG",
+  "featured": true
+},
+{
+  "id": "zepto-retention-analytics",
+  "title": "Zepto Retention Analytics",
+  "description": "Churn prediction pipeline with SQL feature mart, RF classifier (AUC 0.79), SHAP explainability, and CLV-tiered intervention engine.",
+  "techStack": ["Python", "SQL", "scikit-learn", "SHAP", "SQLite"],
+  "url": "https://github.com/bhanuswaroop1247/zepto-retention-analytics",
+  "featured": true
+}
+  ],
+  "experiences": [
+    {
+      "company": "BHIOVS Research Centre, LV Prasad Eye Institute (LVPEI)",
+      "position": "Graduate Researcher",
+      "location": "Hyderabad",
+      "startDate": "May 2025",
+      "endDate": "May 2026",
+      "desc": []
+    }
+  ],
+  "educations": [
+    {
+      "institute": "IIT Hyderabad",
+      "degree": "M.Tech Ophthalmic Engineering",
+      "startDate": "2024",
+      "endDate": "2026",
+      "cgpa": "8.59"
+    },
+    {
+      "institute": "Sagi Ramakrishnam Raju Engineering College",
+      "degree": "B.Tech Information Technology",
+      "startDate": "2019",
+      "endDate": "2023",
+      "cgpa": "7.66"
+    }
+  ],
+  "socials": [
+    {
+      "icon": "FaLinkedin",
+      "link": "https://www.linkedin.com/in/pudi-bhanu-swaroop-927a701aa"
+    },
+    {
+      "icon": "FaGithub",
+      "link": "https://github.com/bhanuswaroop1247"
+    }
+  ]
+}

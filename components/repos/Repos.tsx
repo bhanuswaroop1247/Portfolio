@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Repos = ({ reposData }: Props) => {
-    const featured = reposData.filter(r => r.featured).slice(0, 6)
+    const featured = reposData.filter(r => r.featured).slice(0, 3)
     const [selected, setSelected] = useState<repo | null>(null)
     const [galleryOpen, setGalleryOpen] = useState(false)
 

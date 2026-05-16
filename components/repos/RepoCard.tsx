@@ -24,7 +24,7 @@ const RepoCard = ({ repo, index, onClick }: Props) => {
     return (
         <div
             onClick={onClick}
-            className='group cursor-pointer flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:shadow-md transition-all duration-200 overflow-hidden'>
+            className='group cursor-pointer flex flex-col rounded-xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200 overflow-hidden'>
             {/* Coloured accent bar */}
             <div className={`h-1 w-full ${bar}`} />
 

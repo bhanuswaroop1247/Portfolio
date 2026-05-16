@@ -1,7 +1,7 @@
 'use client';
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { project } from '@/types/main'
-import { FiX, FiDownload } from 'react-icons/fi'
+import { FiX, FiDownload, FiMaximize, FiMinimize } from 'react-icons/fi'
 import { FaGithub } from 'react-icons/fa'
 
 interface Props {
@@ -14,24 +14,43 @@ const ProjectModal = ({ project, onClose }: Props) => {
     const base = process.env.NEXT_PUBLIC_BASE_PATH || ''
     const fullPdfPath = `${base}${pdfPath}`
 
+    const containerRef = useRef<HTMLDivElement>(null)
+    const [isFullscreen, setIsFullscreen] = useState(false)
+
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') onClose()
+            // Don't close on Escape when in fullscreen — let the browser exit fullscreen first
+            if (e.key === 'Escape' && !document.fullscreenElement) onClose()
+        }
+        const handleFsChange = () => {
+            setIsFullscreen(!!document.fullscreenElement)
         }
         document.addEventListener('keydown', handleKey)
+        document.addEventListener('fullscreenchange', handleFsChange)
         document.body.style.overflow = 'hidden'
         return () => {
             document.removeEventListener('keydown', handleKey)
+            document.removeEventListener('fullscreenchange', handleFsChange)
             document.body.style.overflow = ''
         }
     }, [onClose])
+
+    const toggleFullscreen = () => {
+        if (!document.fullscreenElement) {
+            containerRef.current?.requestFullscreen?.()
+        } else {
+            document.exitFullscreen?.()
+        }
+    }
 
     return (
         <div
             className='fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm'
             onClick={(e) => { if (e.target === e.currentTarget) onClose() }}
         >
-            <div className='relative w-full max-w-5xl max-h-[90vh] flex flex-col rounded-2xl bg-[var(--surface)] border border-[var(--border)] overflow-hidden shadow-2xl'>
+            <div
+                ref={containerRef}
+                className={`relative w-full ${isFullscreen ? 'max-w-none max-h-none h-full rounded-none' : 'max-w-5xl max-h-[90vh] rounded-2xl'} flex flex-col bg-[var(--surface)] border border-[var(--border)] overflow-hidden shadow-2xl`}>
 
                 {/* Header */}
                 <div className='flex items-start justify-between p-5 border-b border-[var(--border)]'>
@@ -54,6 +73,13 @@ const ProjectModal = ({ project, onClose }: Props) => {
                             <FiDownload size={14} />
                             Download
                         </a>
+                        <button
+                            onClick={toggleFullscreen}
+                            aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                            title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
+                            className='p-1.5 rounded-md border border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors'>
+                            {isFullscreen ? <FiMinimize size={16} /> : <FiMaximize size={16} />}
+                        </button>
                         {githubUrl && (
                             <a
                                 href={githubUrl}

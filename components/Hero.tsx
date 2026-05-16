@@ -45,7 +45,7 @@ const Hero = ({ mainData }: HeroProps) => {
                         {/* CTA buttons */}
                         <div className='flex flex-wrap gap-3 mt-2'>
                             <a
-                                href={resumeUrl}
+                                href={`${base}${resumeUrl}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='flex items-center gap-2 px-5 py-2.5 rounded-md bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-sm font-medium transition-colors'>

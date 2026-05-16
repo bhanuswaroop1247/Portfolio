@@ -14,12 +14,14 @@ const accentColors: Record<string, string> = {
     'AI Workflow': 'bg-violet-500',
     'Analytics': 'bg-emerald-500',
     'Product Strategy': 'bg-blue-500',
+    'Business Case Study': 'bg-amber-500',
 }
 
 const accentBg: Record<string, string> = {
     'AI Workflow': 'bg-violet-500/20',
     'Analytics': 'bg-emerald-500/20',
     'Product Strategy': 'bg-blue-500/20',
+    'Business Case Study': 'bg-amber-500/20',
 }
 
 const ProjectCard = ({ project, onClick, compact = false }: Props) => {
